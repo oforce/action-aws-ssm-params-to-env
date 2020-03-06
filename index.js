@@ -3,9 +3,7 @@ const { getParameters } = require('./ssm');
 
 async function run() {
   const params = core.getInput('params', { required: true });
-  console.log('Chris: run -> params', params);
-
-  const values = await getParameters(JSON.parse(params));
+  const values = await getParameters(params);
   values.forEach(setEnvironmentVariable);
 }
 
