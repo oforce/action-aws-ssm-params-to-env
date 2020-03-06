@@ -3,7 +3,8 @@ const aws = require('aws-sdk');
 const ssm = new aws.SSM();
 
 function getParameters(params) {
-  const promises = JSON.parse(params).map(getParameter);
+  const entries = JSON.parse(params);
+  const promises = entries.map(getParameter);
   return Promise.all(promises);
 }
 
