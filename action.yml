@@ -1,0 +1,16 @@
+name: AWS SSM Paramters to Environment Variables
+author: Chris Martin <chris.martin@oforce.com>
+description: AWS SSM Paramters to Environment Variables
+
+branding:
+  icon: cloud
+  color: orange
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+inputs:
+  var:
+    description: The parameter to read
+    required: true
