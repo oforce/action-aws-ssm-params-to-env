@@ -11,6 +11,6 @@ runs:
   main: 'dist/index.js'
 
 inputs:
-  var:
+  variables:
     description: The parameter to read
     required: true
